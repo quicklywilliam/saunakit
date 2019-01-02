@@ -69,7 +69,8 @@ Lastly, you should set up the Homekit component as described [here](https://www.
 
 ![Hey Siri Turn on the Sauna](images/applewatch.jpg)
 
---
+---
+
 <span id="f1"></span><small>1. Rather than build a high-voltage switch using a solid state relay, I used an off-the-shelf switch designed for automation. I kept the switch completely separate from the system used to control it, as well as from the temperature sensor. I decided not to programmatically control the temperature and instead use the heater’s built in thermostat and controls.</small> [↩](#a1)
 
 <span id="f2"><small>2. Such controls are called ‘Club Controls’ because timerless controls are only intended for use in a club when attendant is on duty. Our system will have a software timer, but I have no idea if this is legal in your state or safe. See the disclaimer above again.</small> [↩](#a2)

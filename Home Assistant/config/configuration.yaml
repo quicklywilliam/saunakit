@@ -1,0 +1,24 @@
+# add this to the end of your configuration.yaml file
+
+zwave:
+   usb_path: /dev/ttyACM0
+
+sensor:
+  - platform: rest
+    name: Temp Sensor
+    resource: http://10.0.1.X:5000/temp
+    value_template: '{{ value_json.temp_f | round(1) }}'
+    unit_of_measurement: "F"
+    scan_interval: 15
+binary_sensor:
+  - platform: rest
+    name: Heat Threshold Sensor
+    device_class: smoke
+    resource: http://10.0.1.X:5000/temp
+    value_template: '{{ value_json.temp_f | float > 160 }}'
+    scan_interval: 13
+
+timer:
+  sauna:
+    duration: '00:00:00'
+    icon: mdi:thermometer

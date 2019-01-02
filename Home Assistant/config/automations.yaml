@@ -1,0 +1,50 @@
+# add this to the end of your automations.yaml file
+
+- action:
+  - data:
+      duration: 01:00:00
+      entity_id: timer.sauna
+    service: timer.start
+  alias: Start Sauna Timer When Sauna Turns On
+  condition: []
+  id: '1519964939982'
+  trigger:
+  - entity_id: switch.aeotec_zw078_heavy_duty_smart_switch_gen5_switch
+    from: 'off'
+    platform: state
+    to: 'on'
+- action:
+  - data:
+      entity_id: switch.aeotec_zw078_heavy_duty_smart_switch_gen5_switch
+    service: switch.turn_off
+  alias: Turn Off Sauna When Timer Stops
+  condition: []
+  id: '1519965173244'
+  trigger:
+  - event_data:
+      entity_id: timer.sauna
+    event_type: timer.finished
+    platform: event
+- action:
+  - data:
+      entity_id: timer.sauna
+    service: timer.cancel
+  alias: Stop Timer When Sauna Turns Off
+  condition: []
+  id: '1519965481879'
+  trigger:
+  - entity_id: switch.aeotec_zw078_heavy_duty_smart_switch_gen5_switch
+    from: 'on'
+    platform: state
+    to: 'off'
+- action:
+  - data:
+      entity_id: switch.aeotec_zw078_heavy_duty_smart_switch_gen5_switch
+    service: switch.turn_off
+  alias: Turn Off Sauna when Power Goes to 0
+  condition: []
+  id: '1523073778378'
+  trigger:
+  - below: '0.1'
+    entity_id: sensor.aeotec_zw078_heavy_duty_smart_switch_gen5_power
+    platform: numeric_state

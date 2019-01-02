@@ -44,7 +44,7 @@ Log on to your Pi and add the following to the end of the /boot/config.txt file,
 
 At this point your Pi is capable of reading the temperature in your sauna, but it needs a way to communicate that back to the second Pi running Home Assistant. The way we’ll do that is to run a really simple web server that just shows the basic temperature. The server is run using Flask, which you’ll need to install and configure to run when the Pi boots up (see above). 
 
-The [Flask application itself](Temperature\ Sensor/temperature.py) is extremely simple. It reads the temperature and makes it available as a json file in Fahrenheit and Celsius. 
+The [Flask application itself](Temperature%20Sensor/temperature.py) is extremely simple. It reads the temperature and makes it available as a json file in Fahrenheit and Celsius. 
 
 ## Setting up the Switch
 Hire a licensed electrician to do this when they are wiring the heater and controls. The switch should control the entire 240v circuit the sauna is on and can be installed somewhere near your panel. Once you have set up Home Assistant, follow the switch’s printed instructions to get it paired with the Z-Stick, restart Home Assistant and then you should be good to go.
@@ -54,12 +54,12 @@ The simplest way to get Home Assistant up and running on a Raspberry Pi is to us
 
 Once you have successfully set up Home Assistant, we need to add the configuration files so we can set things up for SaunaKit. [SSH](https://www.home-assistant.io/addons/ssh/) onto your Home Assistant Pi, and then navigate to the `/config` directory. The contents of the following two files should be *appended* to the existing files in this directory of the same name.
 
-* [configuration.yaml](Home\ Assistant/config/configuration.yaml)
+* [configuration.yaml](Home%20Assistant/config/configuration.yaml)
 	- Configures Home Assistant to use the Z-Stick for Z-Wave communication
 	- Creates a software temperature sensor using the web server we exposed from our temperature sensor. Note that you’ll need to change this to include the actual IP of your Pi.
 	- Creates another ‘binary sensor’ using the temperature sensor web server. This one checks to see if the temperature is currently above the target temperature (160ºF)<sup id="a4">[4](#f4)</sup>.
 	- Creates a timer which will turn the sauna off. The actual behavior is defined in automations.yaml below.
-* [automations.yaml](Home\ Assistant/config/automations.yaml)
+* [automations.yaml](Home%20Assistant/config/automations.yaml)
 	- Starts the timer at one hour when the sauna power turns on.
 	- Turns off the sauna when the timer elapses.
 	- Cancels the timer when the sauna otherwise turns off.

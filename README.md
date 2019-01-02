@@ -1,9 +1,10 @@
-![The Temperature Sensor](images/applewatch.jpg)
+![SaunaKit](images/screenshot.png)
 
 # SaunaKit
 *This README and all other documentation and software in this repository are covered by the attached MIT license. Nothing in this repository should be construed as a recommendation or assertion that something is safe, legal or otherwise a good idea. Connecting a heater or any other electric device to a computer could do terrible things, like burn your house down. I’m not responsible for anything that happens if you choose to use this knowledge, so MAKE USE OF IT EXCLUSIVELY AT YOUR OWN RISK.*
 
 ## The Design
+
 Traditional saunas take a while to heat up. Hence, being able to start heating your sauna automatically is a major convenience. Using SaunaKit, you could start it with Siri before you bike home from work and have it ready when you arrive. You could start it on a schedule so it is ready when you wake up in the morning, you could even wear a Galvanic Skin Response sensor and have it start your sauna when you get stressed out. Conceivably.
 
 SaunaKit also lets you check the temperatue of the sauna, and sends you a push notification when the sauna has reached the target temperature.
@@ -65,7 +66,8 @@ Once you have successfully set up Home Assistant, we need to add the configurati
 
 Lastly, you should set up the Homekit component as described [here](https://www.home-assistant.io/components/homekit/). This will let you control the sauna not only from Home Assistant but from the Home app and using Siri.
 
-![The Temperature Sensor](images/screenshot.png)
+![Hey Siri Turn on the Sauna](images/applewatch.jpg)
+
 --
 <span id="f1"></span><small>1. Rather than build a high-voltage switch using a solid state relay, I used an off-the-shelf switch designed for automation. I kept the switch completely separate from the system used to control it, as well as from the temperature sensor. I decided not to programmatically control the temperature and instead use the heater’s built in thermostat and controls.</small> [↩](#a1)
 

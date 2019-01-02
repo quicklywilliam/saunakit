@@ -67,13 +67,13 @@ Lastly, you should set up the Homekit component as described [here](https://www.
 
 ![The Temperature Sensor](images/screenshot.png)
 --
-<small id="f1">1. Rather than build a high-voltage switch using a solid state relay, I used an off-the-shelf switch designed for automation. I kept the switch completely separate from the system used to control it, as well as from the temperature sensor. I decided not to programmatically control the temperature and instead use the heater’s built in thermostat and controls.</small> [↩](#a1)
+<span id="f1"></span><small>1. Rather than build a high-voltage switch using a solid state relay, I used an off-the-shelf switch designed for automation. I kept the switch completely separate from the system used to control it, as well as from the temperature sensor. I decided not to programmatically control the temperature and instead use the heater’s built in thermostat and controls.</small> [↩](#a1)
 
-<small id="f2">2. Such controls are called ‘Club Controls’ because timerless controls are only intended for use in a club when attendant is on duty. Our system will have a software timer, but I have no idea if this is legal in your state or safe. See the disclaimer above again.</small> [↩](#a2)
+<span id="f2"><small>2. Such controls are called ‘Club Controls’ because timerless controls are only intended for use in a club when attendant is on duty. Our system will have a software timer, but I have no idea if this is legal in your state or safe. See the disclaimer above again.</small> [↩](#a2)
 
-<small id="f3">3. If you didn’t want to do any hacking, I suppose you could use a consumer home automation hub such as the [Wink Hub](https://www.wink.com/products/wink-hub/) to accomplish the basic remote start without the temperature sensor. </small> [↩](#a3)
+<span id="f3"><small>3. If you didn’t want to do any hacking, I suppose you could use a consumer home automation hub such as the [Wink Hub](https://www.wink.com/products/wink-hub/) to accomplish the basic remote start without the temperature sensor. </small> [↩](#a3)
 
-<small id="f4">4. You’ll notice the device_class is set to ‘smoke’. This is one of my favorite hacks. For whatever Apple-type reason, the Home app only allows certain types of sensors to deliver a push notification using the built in Home app. Smoke alarms are one such sensor, so my solution was to emulate a smoke alarm. I never tire of getting a ‘Smoke detected in Sauna’ notification 😆.</small> [↩](#a4)
+<span id="f4"><small>4. You’ll notice the device_class is set to ‘smoke’. This is one of my favorite hacks. For whatever Apple-type reason, the Home app only allows certain types of sensors to deliver a push notification using the built in Home app. Smoke alarms are one such sensor, so my solution was to emulate a smoke alarm. I never tire of getting a ‘Smoke detected in Sauna’ notification 😆.</small> [↩](#a4)
 
-<small id="f5">5. This is my other favorite hack. When you turn it off, the power usage will go to nearly 0. This triggers the automation to turn the Z-Wave switch off. When the sauna is cycling on and off to maintain temperature, the heater still draws a small amount of power (~5W on my heater) so you don’t have to worry about it turning itself off when it shouldn’t.  </small> [↩](#a5)
+<span id="f5"><small>5. This is my other favorite hack. When you turn it off, the power usage will go to nearly 0. This triggers the automation to turn the Z-Wave switch off. When the sauna is cycling on and off to maintain temperature, the heater still draws a small amount of power (~5W on my heater) so you don’t have to worry about it turning itself off when it shouldn’t.  </small> [↩](#a5)
 

@@ -2,9 +2,9 @@ import os
 import glob
 import time
 
-from flask import Flask, Response, json
+from flask import Flask, Response, json, render_template
 
-app = Flask(__name__)
+app = Flask(__name__, static_url_path='', static_folder='static', template_folder='static')
 
 os.system('modprobe w1-gpio')
 os.system('modprobe w1-therm')
@@ -12,6 +12,10 @@ os.system('modprobe w1-therm')
 base_dir = '/sys/bus/w1/devices/'
 device_folder = glob.glob(base_dir + '28*')[0]
 device_file = device_folder + '/w1_slave'
+
+@app.route("/")
+def hello():  
+    return render_template('index.html')
 
 @app.route("/temp")
 def read_temp():

@@ -159,10 +159,11 @@
 		doFetch();
   
 	 var setTemp = function(temp) {		
-		setNumber(_digits[0], Math.floor(temp/100), 1);
-	    setNumber(_digits[1], Math.floor((temp%100)/10), 1);
-	    setNumber(_digits[2], temp%10, 1);
+		setNumber(_digits[0], Math.floor(temp/100), Math.floor(temp/100) > 0);
+	    setNumber(_digits[1], Math.floor((temp%100)/10), Math.floor(temp/100) > 0 || Math.floor((temp%100)/10) > 0);
+	    setNumber(_digits[2], temp%10, true);
 	  };
+	  
 	});
 
 	var setNumber = function(digit, number, on) {
@@ -175,6 +176,7 @@
 	    digitSegments[current].forEach(function(digitSegment, index) {
 	      setTimeout(function() {
 	        segments[digitSegment-1].classList.remove('on');
+			segments[digitSegment-1].classList.remove('off');
 	      }, index*45)
 	    });
 	  }
@@ -184,7 +186,11 @@
 	    setTimeout(function() {
 	      digitSegments[number].forEach(function(digitSegment, index) {
 	        setTimeout(function() {
-	          segments[digitSegment-1].classList.add('on');
+				if (on) {
+					segments[digitSegment-1].classList.add('on');
+				} else {
+					segments[digitSegment-1].classList.add('off');
+				}
 	        }, index*45)
 	      });
 	    }, 250);

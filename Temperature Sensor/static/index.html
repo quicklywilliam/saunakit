@@ -7,7 +7,7 @@
 	}
 	#panel {
 		width: 638px;
-		height: 378px;
+		height: 620px;
 		margin: 100px auto;
 		padding-top: 180px;
 		background-image: url(img/panel.png);
@@ -20,7 +20,8 @@
 	  box-shadow: 
 	          inset 0px 0px 18px 0px rgba(255, 255, 255, 0.4);
 	  position:block;
-	  margin-top:-30px;
+	  margin-top:-110px;
+	  margin-bottom: 160px;
 	  margin-left:108px;
 	  width:420px;
 	  text-align:center;
@@ -155,15 +156,38 @@
 				setTimeout(doFetch, 8000)
 			}
 		});
-		}
+	}
+	
+  	var fetchWaterTemperature = function(callback) {
+  		    fetch(`https://waterservices.usgs.gov/nwis/iv/?site=14140020&format=json`)
+  		       .then(response => response.json())
+  		       .then(json => callback(null, json.value.timeSeries[0]["values"][0].value[0].value))
+  		       .catch(error => callback(error, null))
+  		}
+		
+		var doWaterFetch = function() {
+		fetchWaterTemperature((error, temp) => {
+		    if (error) {
+		        console.log(error)
+		    } else {
+				setWaterTemp(Math.round(temp* 9/5 + 32))
+			}
+		});
+	}
 		doFetch();
+		doWaterFetch();
   
 	 var setTemp = function(temp) {		
-		setNumber(_digits[0], Math.floor(temp/100), Math.floor(temp/100) > 0);
-	    setNumber(_digits[1], Math.floor((temp%100)/10), Math.floor(temp/100) > 0 || Math.floor((temp%100)/10) > 0);
+		setNumber(_digits[0], Math.floor(temp/100), temp > 100);
+	    setNumber(_digits[1], Math.floor((temp%100)/10), temp > 10);
 	    setNumber(_digits[2], temp%10, true);
 	  };
 	  
+ 	 var setWaterTemp = function(temp) {		
+ 		setNumber(_digits[3], Math.floor(temp/100), temp > 100);
+ 	    setNumber(_digits[4], Math.floor((temp%100)/10), temp > 10);
+ 	    setNumber(_digits[5], temp%10, true);
+ 	  };
 	});
 
 	var setNumber = function(digit, number, on) {
@@ -232,6 +256,35 @@
     <div class="segment"></div>
     <div class="segment"></div>
     <div class="segment"></div>
+  </div>
+</div>
+<div class="led_display">
+  <div class="digit">
+    <div class="segment" style="background:#4286f4;"></div>
+    <div class="segment" style="background:#4286f4;"></div>
+    <div class="segment" style="background:#4286f4;"></div>
+    <div class="segment" style="background:#4286f4;"></div>
+    <div class="segment" style="background:#4286f4;"></div>
+    <div class="segment" style="background:#4286f4;"></div>
+    <div class="segment" style="background:#4286f4;"></div>
+  </div>
+  <div class="digit">
+    <div class="segment" style="background:#4286f4;"></div>
+    <div class="segment" style="background:#4286f4;"></div>
+    <div class="segment" style="background:#4286f4;"></div>
+    <div class="segment" style="background:#4286f4;"></div>
+    <div class="segment" style="background:#4286f4;"></div>
+    <div class="segment" style="background:#4286f4;"></div>
+    <div class="segment" style="background:#4286f4;"></div>
+  </div>
+  <div class="digit">
+    <div class="segment" style="background:#4286f4;"></div>
+    <div class="segment" style="background:#4286f4;"></div>
+    <div class="segment" style="background:#4286f4;"></div>
+    <div class="segment" style="background:#4286f4;"></div>
+    <div class="segment" style="background:#4286f4;"></div>
+    <div class="segment" style="background:#4286f4;"></div>
+    <div class="segment" style="background:#4286f4;"></div>
   </div>
 </div>
 </div></body></html>

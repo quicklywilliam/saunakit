@@ -1,0 +1,773 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		84F75EF523EF85CA00B8D2FE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84F75EF423EF85CA00B8D2FE /* AppDelegate.swift */; };
+		84F75EF723EF85CA00B8D2FE /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84F75EF623EF85CA00B8D2FE /* SceneDelegate.swift */; };
+		84F75EFB23EF85CE00B8D2FE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 84F75EFA23EF85CE00B8D2FE /* Assets.xcassets */; };
+		84F75EFE23EF85CE00B8D2FE /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 84F75EFD23EF85CE00B8D2FE /* Preview Assets.xcassets */; };
+		84F75F0123EF85CE00B8D2FE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 84F75EFF23EF85CE00B8D2FE /* LaunchScreen.storyboard */; };
+		84F75F0623EF85F800B8D2FE /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84FCABA423EF3173006C3414 /* ContentView.swift */; };
+		84F75F0723EF861100B8D2FE /* SaunaManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84CB80B92325B677002D2815 /* SaunaManager.swift */; };
+		84F75F0923EF862300B8D2FE /* HomeKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 84CE0B9F2324B80300B55295 /* HomeKit.framework */; };
+		84FCAB9123EF3172006C3414 /* Sauna.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = 84FCAB9023EF3172006C3414 /* Sauna.app */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		84FCAB9723EF3172006C3414 /* Interface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 84FCAB9523EF3172006C3414 /* Interface.storyboard */; };
+		84FCAB9923EF3173006C3414 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 84FCAB9823EF3173006C3414 /* Assets.xcassets */; };
+		84FCABA023EF3173006C3414 /* Sauna Watch WatchKit Extension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 84FCAB9F23EF3173006C3414 /* Sauna Watch WatchKit Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		84FCABA523EF3173006C3414 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84FCABA423EF3173006C3414 /* ContentView.swift */; };
+		84FCABA723EF3173006C3414 /* HostingController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84FCABA623EF3173006C3414 /* HostingController.swift */; };
+		84FCABA923EF3173006C3414 /* ExtensionDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84FCABA823EF3173006C3414 /* ExtensionDelegate.swift */; };
+		84FCABAB23EF3173006C3414 /* NotificationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84FCABAA23EF3173006C3414 /* NotificationController.swift */; };
+		84FCABAD23EF3173006C3414 /* NotificationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84FCABAC23EF3173006C3414 /* NotificationView.swift */; };
+		84FCABAF23EF3173006C3414 /* ComplicationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84FCABAE23EF3173006C3414 /* ComplicationController.swift */; };
+		84FCABB123EF3174006C3414 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 84FCABB023EF3174006C3414 /* Assets.xcassets */; };
+		84FCABB423EF3174006C3414 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 84FCABB323EF3174006C3414 /* Preview Assets.xcassets */; };
+		84FCABC223EF3268006C3414 /* SaunaManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84CB80B92325B677002D2815 /* SaunaManager.swift */; };
+		84FCABC423EF3298006C3414 /* HomeKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 84FCABC323EF3298006C3414 /* HomeKit.framework */; };
+		84FCABC923EF4193006C3414 /* SwiftUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 84FCABC823EF4193006C3414 /* SwiftUI.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		84FCAB9223EF3172006C3414 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 84CE0B812324B7F600B55295 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 84FCAB8F23EF3172006C3414;
+			remoteInfo = "Sauna Watch WatchKit App";
+		};
+		84FCABA123EF3173006C3414 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 84CE0B812324B7F600B55295 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 84FCAB9E23EF3173006C3414;
+			remoteInfo = "Sauna Watch WatchKit Extension";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		84FCABBA23EF3174006C3414 /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				84FCABA023EF3173006C3414 /* Sauna Watch WatchKit Extension.appex in Embed App Extensions */,
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		84FCABBE23EF3174006C3414 /* Embed Watch Content */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "$(CONTENTS_FOLDER_PATH)/Watch";
+			dstSubfolderSpec = 16;
+			files = (
+				84FCAB9123EF3172006C3414 /* Sauna.app in Embed Watch Content */,
+			);
+			name = "Embed Watch Content";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		8412310C23F8793D000DD58F /* HomeKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = HomeKit.framework; path = ../../../../../System/Library/PrivateFrameworks/HomeKit.framework; sourceTree = "<group>"; };
+		84CB80B92325B677002D2815 /* SaunaManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SaunaManager.swift; sourceTree = "<group>"; };
+		84CE0B9F2324B80300B55295 /* HomeKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = HomeKit.framework; path = System/Library/Frameworks/HomeKit.framework; sourceTree = SDKROOT; };
+		84F75EED23EF80B200B8D2FE /* Sauna Watch WatchKit Extension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "Sauna Watch WatchKit Extension.entitlements"; sourceTree = "<group>"; };
+		84F75EF223EF85CA00B8D2FE /* Sauna.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Sauna.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		84F75EF423EF85CA00B8D2FE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		84F75EF623EF85CA00B8D2FE /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		84F75EFA23EF85CE00B8D2FE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		84F75EFD23EF85CE00B8D2FE /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		84F75F0023EF85CE00B8D2FE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		84F75F0223EF85CE00B8D2FE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		84F75F0823EF862200B8D2FE /* Sauna iOS.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "Sauna iOS.entitlements"; sourceTree = "<group>"; };
+		84FCAB8D23EF3171006C3414 /* Sauna .app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Sauna .app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		84FCAB9023EF3172006C3414 /* Sauna.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Sauna.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		84FCAB9623EF3172006C3414 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Interface.storyboard; sourceTree = "<group>"; };
+		84FCAB9823EF3173006C3414 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		84FCAB9A23EF3173006C3414 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		84FCAB9F23EF3173006C3414 /* Sauna Watch WatchKit Extension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "Sauna Watch WatchKit Extension.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
+		84FCABA423EF3173006C3414 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		84FCABA623EF3173006C3414 /* HostingController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HostingController.swift; sourceTree = "<group>"; };
+		84FCABA823EF3173006C3414 /* ExtensionDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtensionDelegate.swift; sourceTree = "<group>"; };
+		84FCABAA23EF3173006C3414 /* NotificationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationController.swift; sourceTree = "<group>"; };
+		84FCABAC23EF3173006C3414 /* NotificationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationView.swift; sourceTree = "<group>"; };
+		84FCABAE23EF3173006C3414 /* ComplicationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComplicationController.swift; sourceTree = "<group>"; };
+		84FCABB023EF3174006C3414 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		84FCABB323EF3174006C3414 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		84FCABB523EF3174006C3414 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		84FCABB623EF3174006C3414 /* PushNotificationPayload.apns */ = {isa = PBXFileReference; lastKnownFileType = text; path = PushNotificationPayload.apns; sourceTree = "<group>"; };
+		84FCABC323EF3298006C3414 /* HomeKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = HomeKit.framework; path = Platforms/WatchOS.platform/Developer/SDKs/WatchOS6.1.sdk/System/Library/Frameworks/HomeKit.framework; sourceTree = DEVELOPER_DIR; };
+		84FCABC623EF4119006C3414 /* SwiftUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftUI.framework; path = System/Library/Frameworks/SwiftUI.framework; sourceTree = SDKROOT; };
+		84FCABC823EF4193006C3414 /* SwiftUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftUI.framework; path = Platforms/WatchOS.platform/Developer/SDKs/WatchOS6.1.sdk/System/Library/Frameworks/SwiftUI.framework; sourceTree = DEVELOPER_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		84F75EEF23EF85CA00B8D2FE /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				84F75F0923EF862300B8D2FE /* HomeKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		84FCAB9C23EF3173006C3414 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				84FCABC923EF4193006C3414 /* SwiftUI.framework in Frameworks */,
+				84FCABC423EF3298006C3414 /* HomeKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		84CE0B802324B7F600B55295 = {
+			isa = PBXGroup;
+			children = (
+				84CE0B8B2324B7F600B55295 /* Sauna */,
+				84F75EF323EF85CA00B8D2FE /* Sauna iOS */,
+				84FCAB9423EF3172006C3414 /* Sauna Watch WatchKit App */,
+				84FCABA323EF3173006C3414 /* Sauna Watch WatchKit Extension */,
+				84CE0B8A2324B7F600B55295 /* Products */,
+				84CE0B9E2324B80300B55295 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		84CE0B8A2324B7F600B55295 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				84FCAB8D23EF3171006C3414 /* Sauna .app */,
+				84FCAB9023EF3172006C3414 /* Sauna.app */,
+				84FCAB9F23EF3173006C3414 /* Sauna Watch WatchKit Extension.appex */,
+				84F75EF223EF85CA00B8D2FE /* Sauna.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		84CE0B8B2324B7F600B55295 /* Sauna */ = {
+			isa = PBXGroup;
+			children = (
+				84CB80B92325B677002D2815 /* SaunaManager.swift */,
+				84FCABA423EF3173006C3414 /* ContentView.swift */,
+			);
+			path = Sauna;
+			sourceTree = "<group>";
+		};
+		84CE0B9E2324B80300B55295 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				8412310C23F8793D000DD58F /* HomeKit.framework */,
+				84FCABC623EF4119006C3414 /* SwiftUI.framework */,
+				84FCABC823EF4193006C3414 /* SwiftUI.framework */,
+				84FCABC323EF3298006C3414 /* HomeKit.framework */,
+				84CE0B9F2324B80300B55295 /* HomeKit.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		84F75EF323EF85CA00B8D2FE /* Sauna iOS */ = {
+			isa = PBXGroup;
+			children = (
+				84F75F0823EF862200B8D2FE /* Sauna iOS.entitlements */,
+				84F75EF423EF85CA00B8D2FE /* AppDelegate.swift */,
+				84F75EF623EF85CA00B8D2FE /* SceneDelegate.swift */,
+				84F75EFA23EF85CE00B8D2FE /* Assets.xcassets */,
+				84F75EFF23EF85CE00B8D2FE /* LaunchScreen.storyboard */,
+				84F75F0223EF85CE00B8D2FE /* Info.plist */,
+				84F75EFC23EF85CE00B8D2FE /* Preview Content */,
+			);
+			path = "Sauna iOS";
+			sourceTree = "<group>";
+		};
+		84F75EFC23EF85CE00B8D2FE /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				84F75EFD23EF85CE00B8D2FE /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		84FCAB9423EF3172006C3414 /* Sauna Watch WatchKit App */ = {
+			isa = PBXGroup;
+			children = (
+				84FCAB9523EF3172006C3414 /* Interface.storyboard */,
+				84FCAB9823EF3173006C3414 /* Assets.xcassets */,
+				84FCAB9A23EF3173006C3414 /* Info.plist */,
+			);
+			path = "Sauna Watch WatchKit App";
+			sourceTree = "<group>";
+		};
+		84FCABA323EF3173006C3414 /* Sauna Watch WatchKit Extension */ = {
+			isa = PBXGroup;
+			children = (
+				84F75EED23EF80B200B8D2FE /* Sauna Watch WatchKit Extension.entitlements */,
+				84FCABA623EF3173006C3414 /* HostingController.swift */,
+				84FCABA823EF3173006C3414 /* ExtensionDelegate.swift */,
+				84FCABAA23EF3173006C3414 /* NotificationController.swift */,
+				84FCABAC23EF3173006C3414 /* NotificationView.swift */,
+				84FCABAE23EF3173006C3414 /* ComplicationController.swift */,
+				84FCABB023EF3174006C3414 /* Assets.xcassets */,
+				84FCABB523EF3174006C3414 /* Info.plist */,
+				84FCABB623EF3174006C3414 /* PushNotificationPayload.apns */,
+				84FCABB223EF3174006C3414 /* Preview Content */,
+			);
+			path = "Sauna Watch WatchKit Extension";
+			sourceTree = "<group>";
+		};
+		84FCABB223EF3174006C3414 /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				84FCABB323EF3174006C3414 /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		84F75EF123EF85CA00B8D2FE /* Sauna iOS */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 84F75F0323EF85CE00B8D2FE /* Build configuration list for PBXNativeTarget "Sauna iOS" */;
+			buildPhases = (
+				84F75EEE23EF85CA00B8D2FE /* Sources */,
+				84F75EEF23EF85CA00B8D2FE /* Frameworks */,
+				84F75EF023EF85CA00B8D2FE /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Sauna iOS";
+			productName = "Sauna iOS";
+			productReference = 84F75EF223EF85CA00B8D2FE /* Sauna.app */;
+			productType = "com.apple.product-type.application";
+		};
+		84FCAB8C23EF3171006C3414 /* Sauna Watch */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 84FCABBF23EF3174006C3414 /* Build configuration list for PBXNativeTarget "Sauna Watch" */;
+			buildPhases = (
+				84FCAB8B23EF3171006C3414 /* Resources */,
+				84FCABBE23EF3174006C3414 /* Embed Watch Content */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				84FCAB9323EF3172006C3414 /* PBXTargetDependency */,
+			);
+			name = "Sauna Watch";
+			productName = "Sauna Watch";
+			productReference = 84FCAB8D23EF3171006C3414 /* Sauna .app */;
+			productType = "com.apple.product-type.application.watchapp2-container";
+		};
+		84FCAB8F23EF3172006C3414 /* Sauna Watch App */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 84FCABBB23EF3174006C3414 /* Build configuration list for PBXNativeTarget "Sauna Watch App" */;
+			buildPhases = (
+				84FCAB8E23EF3172006C3414 /* Resources */,
+				84FCABBA23EF3174006C3414 /* Embed App Extensions */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				84FCABA223EF3173006C3414 /* PBXTargetDependency */,
+			);
+			name = "Sauna Watch App";
+			productName = "Sauna Watch WatchKit App";
+			productReference = 84FCAB9023EF3172006C3414 /* Sauna.app */;
+			productType = "com.apple.product-type.application.watchapp2";
+		};
+		84FCAB9E23EF3173006C3414 /* Sauna Watch WatchKit Extension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 84FCABB723EF3174006C3414 /* Build configuration list for PBXNativeTarget "Sauna Watch WatchKit Extension" */;
+			buildPhases = (
+				84FCAB9B23EF3173006C3414 /* Sources */,
+				84FCAB9C23EF3173006C3414 /* Frameworks */,
+				84FCAB9D23EF3173006C3414 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Sauna Watch WatchKit Extension";
+			productName = "Sauna Watch WatchKit Extension";
+			productReference = 84FCAB9F23EF3173006C3414 /* Sauna Watch WatchKit Extension.appex */;
+			productType = "com.apple.product-type.watchkit2-extension";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		84CE0B812324B7F600B55295 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1130;
+				LastUpgradeCheck = 1030;
+				ORGANIZATIONNAME = "Knock Software, Inc";
+				TargetAttributes = {
+					84F75EF123EF85CA00B8D2FE = {
+						CreatedOnToolsVersion = 11.3.1;
+					};
+					84FCAB8C23EF3171006C3414 = {
+						CreatedOnToolsVersion = 11.3.1;
+					};
+					84FCAB8F23EF3172006C3414 = {
+						CreatedOnToolsVersion = 11.3.1;
+					};
+					84FCAB9E23EF3173006C3414 = {
+						CreatedOnToolsVersion = 11.3.1;
+					};
+				};
+			};
+			buildConfigurationList = 84CE0B842324B7F600B55295 /* Build configuration list for PBXProject "Sauna" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 84CE0B802324B7F600B55295;
+			productRefGroup = 84CE0B8A2324B7F600B55295 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				84FCAB8C23EF3171006C3414 /* Sauna Watch */,
+				84FCAB8F23EF3172006C3414 /* Sauna Watch App */,
+				84FCAB9E23EF3173006C3414 /* Sauna Watch WatchKit Extension */,
+				84F75EF123EF85CA00B8D2FE /* Sauna iOS */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		84F75EF023EF85CA00B8D2FE /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				84F75F0123EF85CE00B8D2FE /* LaunchScreen.storyboard in Resources */,
+				84F75EFE23EF85CE00B8D2FE /* Preview Assets.xcassets in Resources */,
+				84F75EFB23EF85CE00B8D2FE /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		84FCAB8B23EF3171006C3414 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		84FCAB8E23EF3172006C3414 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				84FCAB9923EF3173006C3414 /* Assets.xcassets in Resources */,
+				84FCAB9723EF3172006C3414 /* Interface.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		84FCAB9D23EF3173006C3414 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				84FCABB423EF3174006C3414 /* Preview Assets.xcassets in Resources */,
+				84FCABB123EF3174006C3414 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		84F75EEE23EF85CA00B8D2FE /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				84F75F0723EF861100B8D2FE /* SaunaManager.swift in Sources */,
+				84F75EF523EF85CA00B8D2FE /* AppDelegate.swift in Sources */,
+				84F75EF723EF85CA00B8D2FE /* SceneDelegate.swift in Sources */,
+				84F75F0623EF85F800B8D2FE /* ContentView.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		84FCAB9B23EF3173006C3414 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				84FCABA723EF3173006C3414 /* HostingController.swift in Sources */,
+				84FCABA523EF3173006C3414 /* ContentView.swift in Sources */,
+				84FCABAB23EF3173006C3414 /* NotificationController.swift in Sources */,
+				84FCABC223EF3268006C3414 /* SaunaManager.swift in Sources */,
+				84FCABA923EF3173006C3414 /* ExtensionDelegate.swift in Sources */,
+				84FCABAD23EF3173006C3414 /* NotificationView.swift in Sources */,
+				84FCABAF23EF3173006C3414 /* ComplicationController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		84FCAB9323EF3172006C3414 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 84FCAB8F23EF3172006C3414 /* Sauna Watch App */;
+			targetProxy = 84FCAB9223EF3172006C3414 /* PBXContainerItemProxy */;
+		};
+		84FCABA223EF3173006C3414 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 84FCAB9E23EF3173006C3414 /* Sauna Watch WatchKit Extension */;
+			targetProxy = 84FCABA123EF3173006C3414 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		84F75EFF23EF85CE00B8D2FE /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				84F75F0023EF85CE00B8D2FE /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		84FCAB9523EF3172006C3414 /* Interface.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				84FCAB9623EF3172006C3414 /* Base */,
+			);
+			name = Interface.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		84CE0B992324B7F800B55295 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.4;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		84CE0B9A2324B7F800B55295 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.4;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		84F75F0423EF85CE00B8D2FE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = "Sauna iOS/Sauna iOS.entitlements";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_ASSET_PATHS = "\"Sauna iOS/Preview Content\"";
+				DEVELOPMENT_TEAM = 5D68YM6KJ5;
+				ENABLE_PREVIEWS = YES;
+				INFOPLIST_FILE = "Sauna iOS/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "knock.Sauna-iOS";
+				PRODUCT_NAME = Sauna;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		84F75F0523EF85CE00B8D2FE /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = "Sauna iOS/Sauna iOS.entitlements";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_ASSET_PATHS = "\"Sauna iOS/Preview Content\"";
+				DEVELOPMENT_TEAM = 5D68YM6KJ5;
+				ENABLE_PREVIEWS = YES;
+				INFOPLIST_FILE = "Sauna iOS/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "knock.Sauna-iOS";
+				PRODUCT_NAME = Sauna;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		84FCABB823EF3174006C3414 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
+				CODE_SIGN_ENTITLEMENTS = "Sauna Watch WatchKit Extension/Sauna Watch WatchKit Extension.entitlements";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_ASSET_PATHS = "\"Sauna Watch WatchKit Extension/Preview Content\"";
+				DEVELOPMENT_TEAM = 5D68YM6KJ5;
+				ENABLE_PREVIEWS = YES;
+				INFOPLIST_FILE = "Sauna Watch WatchKit Extension/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "knock.Sauna-Watch.watchkitapp.watchkitextension";
+				PRODUCT_NAME = "${TARGET_NAME}";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 6.1;
+			};
+			name = Debug;
+		};
+		84FCABB923EF3174006C3414 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
+				CODE_SIGN_ENTITLEMENTS = "Sauna Watch WatchKit Extension/Sauna Watch WatchKit Extension.entitlements";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_ASSET_PATHS = "\"Sauna Watch WatchKit Extension/Preview Content\"";
+				DEVELOPMENT_TEAM = 5D68YM6KJ5;
+				ENABLE_PREVIEWS = YES;
+				INFOPLIST_FILE = "Sauna Watch WatchKit Extension/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "knock.Sauna-Watch.watchkitapp.watchkitextension";
+				PRODUCT_NAME = "${TARGET_NAME}";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 6.1;
+			};
+			name = Release;
+		};
+		84FCABBC23EF3174006C3414 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 5D68YM6KJ5;
+				IBSC_MODULE = Sauna_Watch_WatchKit_Extension;
+				INFOPLIST_FILE = "Sauna Watch WatchKit App/Info.plist";
+				PRODUCT_BUNDLE_IDENTIFIER = "knock.Sauna-Watch.watchkitapp";
+				PRODUCT_NAME = Sauna;
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 6.1;
+			};
+			name = Debug;
+		};
+		84FCABBD23EF3174006C3414 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 5D68YM6KJ5;
+				IBSC_MODULE = Sauna_Watch_WatchKit_Extension;
+				INFOPLIST_FILE = "Sauna Watch WatchKit App/Info.plist";
+				PRODUCT_BUNDLE_IDENTIFIER = "knock.Sauna-Watch.watchkitapp";
+				PRODUCT_NAME = Sauna;
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 6.1;
+			};
+			name = Release;
+		};
+		84FCABC023EF3174006C3414 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 5D68YM6KJ5;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "knock.Sauna-Watch";
+				PRODUCT_NAME = "Sauna ";
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		84FCABC123EF3174006C3414 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 5D68YM6KJ5;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "knock.Sauna-Watch";
+				PRODUCT_NAME = "Sauna ";
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		84CE0B842324B7F600B55295 /* Build configuration list for PBXProject "Sauna" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				84CE0B992324B7F800B55295 /* Debug */,
+				84CE0B9A2324B7F800B55295 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		84F75F0323EF85CE00B8D2FE /* Build configuration list for PBXNativeTarget "Sauna iOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				84F75F0423EF85CE00B8D2FE /* Debug */,
+				84F75F0523EF85CE00B8D2FE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		84FCABB723EF3174006C3414 /* Build configuration list for PBXNativeTarget "Sauna Watch WatchKit Extension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				84FCABB823EF3174006C3414 /* Debug */,
+				84FCABB923EF3174006C3414 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		84FCABBB23EF3174006C3414 /* Build configuration list for PBXNativeTarget "Sauna Watch App" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				84FCABBC23EF3174006C3414 /* Debug */,
+				84FCABBD23EF3174006C3414 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		84FCABBF23EF3174006C3414 /* Build configuration list for PBXNativeTarget "Sauna Watch" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				84FCABC023EF3174006C3414 /* Debug */,
+				84FCABC123EF3174006C3414 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 84CE0B812324B7F600B55295 /* Project object */;
+}

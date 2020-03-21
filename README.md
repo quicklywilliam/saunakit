@@ -6,13 +6,13 @@
 
 ## The Design
 
+<img align="right" width="220px" style="padding-left:30px" src="images/switch.gif">
+
 Traditional saunas take a while to heat up. Hence, being able to start heating your sauna automatically is a major convenience. Using SaunaKit, you could start it with Siri before you bike home from work and have it ready when you arrive. You could start it on a schedule so it is ready when you wake up in the morning, you could even wear a Galvanic Skin Response sensor and have it start your sauna when you get stressed out. Conceivably.
 
 SaunaKit also lets you check the temperatue of the sauna, and sends you a push notification when the sauna has reached the target temperature.
 
 While switching the sauna *on* can only be done programmatically, once it is on it acts just like an analog system. Remotely starting your sauna with your phone is a great feature, but during sauna you probably don't want to have your phone with you. Hence, the sauna temperature is controlled using the built in analog thermostat, and the sauna can be turned *off* using the built in analog power switch. As soon as you turn it off manually it also will turn off programatically, and you can then switch the analog switch back on to prime for the next use.
-
-![The Switch in Action](images/switch.gif)
 
 Lastly, I had a few technical considerations in how I designed SaunaKit. First, not withstanding the above disclaimer, I tried to make it safer by using a system of independent components, each of which has a clear and simple purpose<sup id="a1">[1](#f1)</sup>.
 
@@ -24,6 +24,9 @@ Once you’ve got the sauna room built, you need to get an electric heater with 
 If you already own a heater with built in controls, you won't be able to operate it remotely without replacing it. You could still follow the relevant parts of this guide to set up temperature monitoring and push notifications.
 
 ## Basic System Components
+<img align="left" width="240px" style="padding-right:30px" src="images/hardware.jpeg">
+
+
 SaunaKit consists of three principle components:
 
 1. **The Temperature Sensor**, a [Raspberry Pi](https://www.raspberrypi.org). Get a Pi with WiFi unless you have an ethernet port near your sauna (wtf?). The sensor device itself is the DS18B20, which you can get in an easy-to-use [waterproof form factor from Sparkfun](https://www.sparkfun.com/products/11050).
@@ -31,7 +34,8 @@ SaunaKit consists of three principle components:
 3. **The Brain**, a second Raspberry Pi running [Home Assistant](https://www.home-assistant.io)<sup id="a3">[3](#f3)</sup>. This will talk to both the temperature sensor and the switch. This Pi is ideally installed near your router, connected via ethernet. You’ll also need a Z-Wave USB adapter to talk to the switch. I recommend [Aeotec’s Z-Stick](https://aeotec.com/z-wave-usb-stick).
 
 ## Setting up the Temperature Sensor
-![The Temperature Sensor](images/temp_sensor.jpeg)
+<img align="right" width="280px" style="padding-left:30px" src="images/temp_sensor.jpeg">
+
 
 ### Hardware setup
 

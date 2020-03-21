@@ -5,16 +5,18 @@
 ![SaunaKit](images/screenshot.png)
 
 ## The Design
-
-<img align="right" width="220px" style="padding-left:30px" src="images/switch.gif">
+<img align="left" width="280px" style="padding-right:30px" src="images/applewatch.jpg">
 
 Traditional saunas take a while to heat up. Hence, being able to start heating your sauna automatically is a major convenience. Using SaunaKit, you could start it with Siri before you bike home from work and have it ready when you arrive. You could start it on a schedule so it is ready when you wake up in the morning, you could even wear a Galvanic Skin Response sensor and have it start your sauna when you get stressed out. Conceivably.
 
 SaunaKit also lets you check the temperatue of the sauna, and sends you a push notification when the sauna has reached the target temperature.
 
+<img align="right" width="200px" style="padding-left:30px" src="images/switch.gif">
+
 While switching the sauna *on* can only be done programmatically, once it is on it acts just like an analog system. Remotely starting your sauna with your phone is a great feature, but during sauna you probably don't want to have your phone with you. Hence, the sauna temperature is controlled using the built in analog thermostat, and the sauna can be turned *off* using the built in analog power switch. As soon as you turn it off manually it also will turn off programatically, and you can then switch the analog switch back on to prime for the next use.
 
 Lastly, I had a few technical considerations in how I designed SaunaKit. First, not withstanding the above disclaimer, I tried to make it safer by using a system of independent components, each of which has a clear and simple purpose<sup id="a1">[1](#f1)</sup>.
+
 
 ## Sauna Requirements
 First, you need a traditional sauna room. If you are just getting started, [Cedar Brook Sauna](https://www.cedarbrooksauna.com) in Washington State has some great how-to guides for the DIY’er. You can also buy one of their precut or prefabricated kits.
@@ -72,8 +74,6 @@ Once you have successfully set up Home Assistant, we need to add the configurati
 	- Turns off the sauna when the detected power goes near 0, which lets you use the club control’s built-in power switch to turn the *Z-Wave switch* off <sup id="a5">[5](#f5)</sup>. You can then flip the club control switch back on so it is primed for the next use.
 
 Lastly, you should set up the Homekit component as described [here](https://www.home-assistant.io/components/homekit/). This will let you control the sauna not only from Home Assistant but from the Home app and using Siri.
-
-![Hey Siri Turn on the Sauna](images/applewatch.jpg)
 
 ---
 

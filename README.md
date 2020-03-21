@@ -10,7 +10,9 @@ Traditional saunas take a while to heat up. Hence, being able to start heating y
 
 SaunaKit also lets you check the temperatue of the sauna, and sends you a push notification when the sauna has reached the target temperature.
 
-I designed SaunaKit to be invisible when in use. The sauna can only be switched *on* programmatically, but once on it acts just like an analog system. After starting the sauna you won’t touch your phone again. The sauna temperature is controlled using the built in analog thermostat. The sauna can be turned *off* using the built in analog power switch.
+While switching the sauna *on* can only be done programmatically, once it is on it acts just like an analog system. Remotely starting your sauna with your phone is a great feature, but during sauna you probably don't want to have your phone with you. Hence, the sauna temperature is controlled using the built in analog thermostat, and the sauna can be turned *off* using the built in analog power switch. As soon as you turn it off manually it also will turn off programatically, and you can then switch the analog switch back on to prime for the next use.
+
+![The Switch in Action](images/switch.gif)
 
 Lastly, I had a few technical considerations in how I designed SaunaKit. First, not withstanding the above disclaimer, I tried to make it safer by using a system of independent components, each of which has a clear and simple purpose<sup id="a1">[1](#f1)</sup>.
 

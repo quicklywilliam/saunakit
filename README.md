@@ -21,17 +21,19 @@ Lastly, I had a few technical considerations in how I designed SaunaKit. First, 
 ## Sauna Requirements
 First, you need a traditional sauna room. If you are just getting started, [Cedar Brook Sauna](https://www.cedarbrooksauna.com) in Washington State has some great how-to guides for the DIY’er. You can also buy one of their precut or prefabricated kits.
 
-Once you’ve got the sauna room built, you need to get an electric heater with *separate, timerless controls* (sometimes called ‘Club Controls’<sup id="a2">[2](#f2)</sup>), such as [this one](https://www.cedarbrooksauna.com/polar-hnvr-60sc-with-psc-external-controls.html). Most heaters have a built-in timer. You twist it to start the heater, and when it runs out the heater turns itself off. That won’t work if you want to start it remotely. What you need as a simple on/off switch you can leave in the On position and then control via a separate switch. You should hire a licensed electrician to wire your sauna and controls. When they are doing the work, have them install the Z-Wave switch as well (see below).
+Once you’ve got the sauna room built, you need to get an electric heater with *separate, timerless controls* (sometimes called ‘Club Controls’<sup id="a2">[2](#f2)</sup>), such as [this one](https://www.cedarbrooksauna.com/polar-hnvr-60sc-with-psc-external-controls.html). Most heaters have a built-in timer. You twist it to start the heater, and when it runs out the heater turns itself off. That won’t work if you want to start it remotely. What you need as a simple on/off switch you can leave in the On position and then control via a separate switch. 
 
 If you already own a heater with built in controls, you won't be able to operate it remotely without replacing it. You could still follow the relevant parts of this guide to set up temperature monitoring and push notifications.
 
+You should hire a licensed electrician to wire your sauna and controls. When they are doing the work, have them install the Z-Wave switch as well (see next section).
+
 ## Basic System Components
-<img align="left" width="240px" style="padding-right:30px" src="images/hardware.jpeg">
+<img align="left" width="320px" style="padding-right:30px" src="images/hardware.jpeg">
 
 
-SaunaKit consists of three principle components:
+SaunaKit consists of three principle components
 
-1. **The Temperature Sensor**, a [Raspberry Pi](https://www.raspberrypi.org). Get a Pi with WiFi unless you have an ethernet port near your sauna (wtf?). The sensor device itself is the DS18B20, which you can get in an easy-to-use [waterproof form factor from Sparkfun](https://www.sparkfun.com/products/11050).
+1. **The Temperature Sensor**, a [Raspberry Pi](https://www.raspberrypi.org). Get a Pi with WiFi unless you have an ethernet port on your sauna (wtf?). The Pi is connected to  a DS18B20 temperature sensor, which you can get in an easy-to-use [waterproof form factor from Sparkfun](https://www.sparkfun.com/products/11050).
 2. **The Switch**, an [Aeotec Heavy Duty Z-Wave Switch](https://aeotec.com/outdoor-z-wave-switch). The switch can be remotely controlled using the Z-Wave protocol and is rated for 240v and up to 40 amps, which should be enough for most small sauna heaters. It also has built in power monitoring, which allows you to monitor energy usage and is useful for automation (see below).
 3. **The Brain**, a second Raspberry Pi running [Home Assistant](https://www.home-assistant.io)<sup id="a3">[3](#f3)</sup>. This will talk to both the temperature sensor and the switch. This Pi is ideally installed near your router, connected via ethernet. You’ll also need a Z-Wave USB adapter to talk to the switch. I recommend [Aeotec’s Z-Stick](https://aeotec.com/z-wave-usb-stick).
 
